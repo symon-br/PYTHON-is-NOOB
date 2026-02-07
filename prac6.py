@@ -28,3 +28,13 @@ def ave(a, b, c):
 
 ave(1, 1, 1) #Function call
 
+
+#default parameters
+def cal_para(a, b=2): #first parameter is not able to make default as when we call the function, we have to provide value for a and b (i.e. cal_para(1) while the value of a) and if we did def cal_para(a=1, b) then will return SyntaxError: as the default parameter should be at the end of the parameter list.
+
+    print(a * b) #b is a default parameter
+    return a * b
+
+cal_para(1) #This will use the default value of b which is 2, so it will return 1*2=2
+cal_para(1, 3) #This will override the default value of b and use
+
