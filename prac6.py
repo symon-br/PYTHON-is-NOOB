@@ -38,3 +38,13 @@ def cal_para(a, b=2): #first parameter is not able to make default as when we ca
 cal_para(1) #This will use the default value of b which is 2, so it will return 1*2=2
 cal_para(1, 3) #This will override the default value of b and use
 
+
+# Question 2
+#WAF to print the length of the list.
+country = ["India", "USA", "UK", "Australia", "Germany", "Nepal", "Bhutan", "Bangladesh", "Sri Lanka", "Pakistan"]
+
+def cal(list):
+    print(len(list))
+    return len(list)
+
+cal(country)
