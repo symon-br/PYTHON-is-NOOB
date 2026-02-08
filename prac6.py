@@ -48,3 +48,74 @@ def cal(list):
     return len(list)
 
 cal(country)
+
+# Question 3
+#WAF to print the elements of a list in a single line
+def print_list(list):
+    for item in list:
+        print(item, end=" ") #end=" " to print all elements in a single line with space between them
+    print() #To move to the next line after printing all elements
+
+print_list(country)
+
+#Question 4
+# Write 
+
+def fact(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * fact(n - 1)
+n3 = int(input("Enter a number to find its factorial: "))
+print(fact(n3))
+
+# Another way using loops
+def fact_loop(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+n5 = int(input("Enter a number to find its factorial using loop: "))
+print(fact_loop(n5))
+
+
+
+# #Question 5
+#WAF to convert inr into npr
+
+def con(n): 
+    print(n * 1.6)#1 inr = 1.6 npr
+    return n * 1.6
+n4 = int(input("Enter amount in INR: "))
+con(int(n4))
+
+
+# Question 6
+#WAF to check whether the number is even or odd
+def call(n):
+    if n % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+n6 = int(input("Enter a number to check if it is even or odd: "))
+call(n6)
+
+
+#RECURSIVE function 
+
+def show(n):
+    if n > 0:
+        print(n)
+        show(n - 1) # recursive call 
+
+show(5)
+
+# factorial
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+    
+n7 = int(input("Enter a number to find its factorial using recursive function: "))
+print(factorial(n7))
