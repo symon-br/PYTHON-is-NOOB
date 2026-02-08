@@ -102,6 +102,9 @@ n6 = int(input("Enter a number to check if it is even or odd: "))
 call(n6)
 
 
+
+
+
 #RECURSIVE function 
 
 def show(n):
@@ -115,7 +118,43 @@ show(5)
 def factorial(n):
     if n == 0 or n == 1:
         return 1
-    return n * factorial(n - 1)
+    return factorial(n - 1) * n 
     
 n7 = int(input("Enter a number to find its factorial using recursive function: "))
 print(factorial(n7))
+
+
+
+# write a recursive function to find the sum of first n numbers
+
+def sum(n):
+    if n == 0:
+        return 0
+    return n + sum(n - 1)
+print(sum(5)) #This will return 5 + 4 + 3 + 2 + 1 + 0 = 15
+
+
+
+# write a recursive function to find the n number of natural numbers 
+def natural(n):
+    if n == 0:
+        return []
+    return natural(n - 1) + [n]
+print(natural(5)) #This will return [1, 2, 3, 4, 5]
+
+
+
+# write a recursive function to find the n number of natural numbers in reverse order
+def con(n):
+    if n == 9:
+        return []
+    return [n] + con(n + 1)
+
+print(con(5))
+
+
+
+
+
+
+
