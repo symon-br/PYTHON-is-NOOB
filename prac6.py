@@ -154,6 +154,16 @@ print(con(5))
 
 
 
+# Write a recursive function to print all the elements of a list 
+def print_list(lst, index=0):
+    if index == len(lst):
+        return
+    print(lst[index])
+    print_list(lst, index + 1) # recursive function only if the statement is written inside of the function, otherwise it will return NameError: name 'print_list' is not defined
+
+my_list = [0, 1, 2, 3, 4, 5]
+print_list(my_list) #this will print whole function's list which is [0, 1, 2, 3, 4, 5] and the index will be incremented by 1 in each recursive call until it reaches the length of the list.
+
 
 
 
