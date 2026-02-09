@@ -70,3 +70,99 @@ with open("example.txt", "r") as f: # this will automatically close the file aft
 # import os
 # os.remove("sample.txt") # this will delete the file named "sample.txt" from the current directory
 
+
+#Question 1
+#write a program to create a file named "practice.txt" and write the following lines in it:
+with open("practice.txt", "w") as f:
+    f.write("Hi Everyone\n")
+    f.write("We are learning file handling \n")
+    f.write("using Java.\n")
+    f.write("I like programming in Java.\n")
+
+#Question 2
+#replace the word java with python in the file "practice.txt"
+
+def change():
+    with open("practice.txt", "r") as f:
+        data = f.read()
+        print(data)
+    data = data.replace("Java", "Python") # this will replace all occurrences of "Java" with "Python" in the string data
+    with open("practice.txt", "w") as f:
+        f.write(data) # this will overwrite the existing data in the file with the new data
+
+
+#Question 3
+#WAF to check if the word "learning " is present in the file practice.txt or not.
+def check():
+    word = "learning"
+    with open("practice.txt", "r") as f:
+        data = f.read()
+        if (data.find(word) != -1):
+            print("FOUND")
+        else:
+            print("NOT FOUND")
+
+check()
+
+#Question 4
+#WAF to find the line number of the first occurrence of the word "programming" in the file practice.txt, if the word is not found then return -1.
+def count():
+    word = "programming"
+    line_no = 1
+    data = True
+    with open("practice.txt", "r") as f:
+        while data:
+            data = f.readline()
+            if(word in data):
+                print(line_no)
+                return
+            line_no += 1
+
+    return -1
+
+print(count())
+
+
+#Question 5
+# from a file containing numbers seperated by comma, print the numbers of even numbers in the file. 
+def even():
+    with open("number.txt","r") as f:
+        data = f.read()
+        numbers = data.split(",")
+        count = 0
+        for num in numbers:
+            if int(num)%2 == 0:
+                print("even ", num)
+                count +=1
+        print("Total even numbers: ", count)
+
+even()
+
+#Another way convert comma into int
+count = 0
+with open("number.txt","r") as f:
+    data = f.read()
+
+    nums = data.split(",")
+    for num in nums:
+        if int(num) % 2 == 0:
+            print("even ", num)
+            count += 1
+        
+print(count)
+
+#Another way using loops
+def arrange():
+    with open("number.txt","r") as f:
+      data = f.read()
+      print(data)
+
+    num = ""
+    for i in range(len(data)):
+        if (data[i] != ","):
+            num += data[i]
+        else:
+            print(num)
+            num = ""
+    print(num)
+arrange()
