@@ -72,5 +72,11 @@ Output:
 2 '''
 
 
+#6.	Use a loop to find the maximum number in a list.
+    
+#7.	Use a loop to find the minimum number in a list.
+#8.	Print numbers from 10 to 1 using a loop.
+#9.	Write a loop to print all odd numbers between 1 and 100.
+#10.	Use a loop to multiply all numbers in a list.
 
 
