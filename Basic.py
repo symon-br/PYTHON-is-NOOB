@@ -22,7 +22,55 @@
 
 
 
-#3.	Write a loop to calculate the sum of numbers in a list.
-#4.	Print each character of a string using a loop.
-#5.	Write a loop to count how many elements are in a list.
+# #3.	Write a loop to calculate the sum of numbers in a list.
+# numbers = [12, 10]
+
+# sum = 0
+
+# for c in numbers:
+#     sum += c
+
+# print(sum)
+
+
+# #4.	Print each character of a string using a loop.
+# letters = "Hello, darling"
+# for char in letters:
+#     print(char) #can print each letters/characters at once!! no need to think in array bits
+
+
+
+# 5.	Write a loop to count how many elements are in a list.
+folders = ['murphy', 1,2, 'charlie'] #list
+count = 0 #initial value for count
+for num in folders: #copy from folders to num & go through each one
+   count+=1 #increment by 1
+
+   print(count)#will print individually 
+
+
+#Iteration 1
+'''num = 'murphy'
+count += 1
+Old value: 0
+New value: 1
+print(count) → prints 1
+Memory:
+| count | 1 |
+Output:
+1 '''
+
+#Iteration 2
+''' num = 1
+count += 1
+Old value: 1
+New value: 2
+print(count) → prints 2
+Memory:
+| count | 2 |
+Output:
+2 '''
+
+
+
 
