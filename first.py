@@ -22,20 +22,21 @@ print(b)
 
 # x ="something"
 
-'''def myfunc():
+def myfunc():
     y = "awesome"
     print("python is " + y) # this is local variable
 
 myfunc()
 print("python is " + x) # this is global variable
-'''
-'''def myfunc2():
+
+
+def myfunc2():
     global x
     x = "fantastic"
 
 myfunc2()
 print("python is " + x) # now this will become global variable
-'''
+
 
 #greater number 
 global x
